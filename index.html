@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Infinito Web Design Studio - Portfolio Zipline</title>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel='stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css'>
+  
+  <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+    <style>
+      #map {
+        position: relative;
+        margin: 0 auto;
+        height: 400px;
+        width: 70%;
+       }
+    </style>
+  
+  
+</head>
+
+<body>
+  <!-- Update 29.9.2015: <head></head> and <body></body> tags are included in this pen for quick copy/paste in case you to try this challenge offline -->
+<head>
+    <title>AIDS info</title>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="./index.html" >AIDS</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about">Favorite Poster
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Awesome Poster</a>
+                    </li>
+                   <li>
+                        <a href="#contact">RRC HK info
+                      	</a>
+                    </li>
+                    <li>
+                        <!--<a href="#home" id="nav_login">Login</a>-->
+                        <ul class="dropdown-menu">
+  							<li><a href="#" id="nav_login">Login <img src="http://ui-cloud.com/res/pixelsdaily/Drop-Down-Menu/demo/images/arrow.png"/></a>
+    					<ul>
+      					<li><a href="./index.html">Login Page</a></li>
+      					<!--<li><a href="#">Item 2</a></li>-->
+      					<li><button id="logoffbtn" type="button" onclick="logoff()" hidden>Log off</button></li>
+    					</ul>
+  						</li>
+						</ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="home"></a>
+    <div class="intro-header">
+      <!--<div class="bg-overlay">
+        <div class="container">
+  
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        
+                    	<!-- Card Footer -->
+
+	                <!--</div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+      <!--</div> -->
+      <div class="user-card round5">
+	<div class="login-box">
+    	<p id="login_result" style="color:red; margin:0; font-size:12px;"></p>
+		<form class="login-form" name="login" action="">
+			<input type="username" name="username" class="username" placeholder="username" />
+			<input type="password" name="password" class="password" placeholder="password" />
+			<input type="submit" id="login" name="login" value="Login" class="login" />
+		</form>
+
+		<div class="or"></div>
+
+		<a href="#" class="login-with-fb">
+			<span class="icon fa fa-facebook"></span>
+			Login with facebook
+		</a>
+		<a href="#" class="login-with-google">
+			<span class="icon fa fa-google-plus"></span>
+			Login with google
+		</a>
+	</div>
+	<div class="signup-box">
+		<form class="signup-form" name="signup" action="">
+			<input type="text" name="log_ac" class="username" placeholder="username" />
+			<input type="text" name="email" class="email" placeholder="email" />
+			<input type="password" name="sign_pw" class="password" placeholder="password" />
+			<input type="password" name="confirm-password" class="confirm-password" placeholder="confirm-password" />
+			<input type="submit" id="sign_up" name="signup" value="Signup" class="signup" />
+		</form>
+	</div>
+    <div id="result"></div>
+    <div class="footer">
+		<span>or </span><a class="toggle-link" href="#">Sign Up</a>
+	</div>
+
+                    </div>
+    </div>
+    <!-- /.intro-header -->
+
+ <!-- Page Content -->
+
+	<a  name="about"></a>
+    <div class="content-section-a">
+      <div class="bg-overlay2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    
+                    <div class="clearfix"></div>
+                  <h2 class="section-heading">Infinito Web Design Studio.</h2>
+                  </br>
+                    <input type="submit" id="show_fav" value="Show Favorite">
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6 collapse navbar-collapse">
+                    
+                </div>
+                <div><img id="current_fav" src="./poster/jpg/poster20161231.jpg" alt="" height="" width="400" hidden></div>
+                <div class="col-lg-5 col-sm-6"><input type="submit" id="remove_fav" value="Reomve Favorite"></div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+      </div>
+     </div>
+    </div>
+
+  
+
+     <!-- Portfolio Grid Section -->
+   <a  name="portfolio"></a>
+    <section id="portfolio" class="bg-light-gray bounds">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Awesomeness Poster.</h2>
+                    <h3 id="below-section" class="section-subheading text-muted">You can add to your List</h3>
+                </div>
+            </div>
+          
+                <div class="col-md-4 col-sm-6 portfolio-item portfolio2">
+                    <a href="./poster/poster20161231.pdf" class="portfolio-link" target="_blank" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="poster2016" src="./poster/jpg/poster20161231.jpg" class="img-responsive" alt="" width="100%" height="100%">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>2016</h4>
+                        <p id="small-text" class="text-muted">Poster</p><button type="button" onclick="add_fav('poster2016')">Add to favorite</button>
+                    </div>
+                </div>
+              <!-- End of Portfolio img2 -->
+              
+              <!-- Portfolio img3 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="./poster/poster20151211.pdf" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="poster2015" src="./poster/jpg/poster20151211.jpg" class="img-responsive" alt="" width="100%" height="100%">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>2015</h4>
+                        <p id="small-text" class="text-muted">Poster</p><button type="button" onclick="add_fav('poster2015')">Add to favorite</button>
+                    </div>
+                </div>
+              <!-- End of Portfolio img3 -->
+              
+              <!-- Portfolio img4 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="./poster/poster20141022.pdf" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="poster2014" src="./poster/jpg/poster20141022.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>2014</h4>
+                        <p id="small-text" class="text-muted">Poster</p><button type="button" onclick="add_fav('poster2014')">Add to favorite</button>
+                    </div>
+                </div>
+              <!-- End of Portfolio img4 -->
+              
+              <!-- Portfolio img5 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="./poster/poster2014a.pdf" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="poster2014a" src="./poster/jpg/poster2014a.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>2014</h4>
+                        <p id="small-text" class="text-muted">Poster A</p><button type="button" onclick="add_fav('poster2014a')">Add to favorite</button>
+                    </div>
+                </div>
+              <!-- End of Portfolio img5 -->
+              
+              <!-- Portfolio img6 -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="poster/poster2014b.pdf" target="_blank" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-fire fa-3x"></i>
+                            </div>
+                        </div>
+                        <img id="poster2014b" src="./poster/jpg/poster2014b.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>2014</h4>
+                        <p id="small-text" class="text-muted">Poster B</p><button type="button" onclick="add_fav('poster2014b')">Add to favorite</button>
+                    </div>
+                </div>
+              <!-- End of Portfolio img6 -->
+            </div>
+        </div>
+    </section>
+
+<div class="banner">
+      <div class="bg-overlay4">
+        <div class="container">         
+            <div class="row">
+                <div class="col-lg-6">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5g1ijpBI6Dk" frameborder="0" allowfullscreen></iframe>
+                </div></div></div></div></div>
+
+
+	<a  name="contact"></a>
+    <div class="banner">
+      <div class="bg-overlay4">
+        <div class="container">         
+            <div class="row">
+                <div class="col-lg-6">
+                  <h2 class="connect">Check out Red Ribbon Centre,Hong Kong <br></h2>
+                </div>
+              <p></p>
+      <!--<input class="btn btn-default btn-lg" type="button" value="More info" onclick='RRCHK()'></input>-->
+      <p></p>
+      <p></p>
+      
+      <p id="rrc_name"></p>
+      <p>Address: </p><p id="rrc_address">2nd Floor, <br/>Wang Tau Hom Jockey Club Clinic, <br/>200 Junction Road East, Kowloon, Hong Kong (near Lok Fu MTR Station )</p>
+      <p>Website: </p><p id="rrc_website"><a href="www.rrc.gov.hk">www.rrc.gov.hk</a></p>
+      <p>Telephone No.: <p id="rrc_tel">3143 7200</p>
+      <p>Service Hours: <p id="rrc_service">Monday - Friday<br/>9:00 am - 1:00 pm<br/>2:00 pm - 6:00 pm <br/>(except public holidays)<br/><br/>Starting from 1 July 2015, all services are by appointment. Please contact (852) 3143 7200 for details.</p>
+      
+      <div id="map"></div>
+      
+               
+        </div>
+        <!-- /.container -->
+    </div></div>
+</div>
+
+
+    <!-- /.banner -->
+
+    <!-- Footer 
+    <footer>
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Infinito Web Design Studio 2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+
+    
+
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5cX5IR1wadSss2JfAKuGWW8-vb9XnIuk&callback=initMap">
+    </script>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'>  </script>
+<script src="js/index.js"></script>
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=init"></script>
+<script src='http://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.concat.min.js'></script>
+<script>
+	
+			/*var rrchkapi = {"header": ["Centre Name", "Address", "Website", "Telephone No.", "Service Hours", "Latitude", "Longitude"], "rows": [["Red Ribbon Centre", "2nd Floor, Wang Tau Hom Jockey Club Clinic, 200 Junction Road East, Kowloon, Hong Kong (near Lok Fu MTR Station )", "www.rrc.gov.hk", "3143 7200", "Monday - Friday\n9:00 am - 1:00 pm\n2:00 pm - 6:00 pm \n(except public holidays)\n\nStarting from 1 July 2015, all services are by appointment. Please contact (852) 3143 7200 for details.", 22.339146, 114.185361]]};*/
+			
+			/*rrchkapi.complete(function(){
+				alert(rrchkapi.header[0]);
+				alert("complete");
+				var obj = JSON.parse(rrchkapi.responseText);
+				alert(obj);
+				//document.getElementById("rcc_name").innerHTML = obj.value();
+			});*/
+	
+	</script>
+    <!-- Google Map API-->
+    
+  
+</body>
+</html>
